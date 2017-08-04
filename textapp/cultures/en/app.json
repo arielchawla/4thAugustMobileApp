@@ -5,6 +5,34 @@
     "qrCodeScan": "Scan"
   },
   "home": {
-    "title": "Home View"
+    "title": "Start View"
+  },
+  "homeView": {
+    "title": "Home",
+    "homeViewModel": {
+      "submitButton": "Confirm",
+      "cancelButton": "Cancel"
+    }
+  },
+  "anliegenmeldenView": {
+    "title": "Anliegen melden",
+    "anliegenmeldenViewModel": {
+      "submitButton": "Confirm",
+      "cancelButton": "Cancel"
+    }
+  },
+  "kontaktView1": {
+    "title": "Kontakt",
+    "kontaktView1Model": {
+      "submitButton": "Confirm",
+      "cancelButton": "Cancel"
+    }
+  },
+  "uberunsView1": {
+    "title": "Über uns",
+    "uberunsView1Model": {
+      "submitButton": "Confirm",
+      "cancelButton": "Cancel"
+    }
   }
 }

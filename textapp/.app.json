@@ -5,9 +5,76 @@
       "type": "kendo-ui-mobile:view",
       "name": "home",
       "components": [],
-      "title": "Home View",
+      "title": "Start View",
+      "addToNavigation": false
+    },
+    {
+      "type": "kendo-ui-mobile:view",
+      "name": "homeView",
+      "components": [
+        {
+          "type": "kendo-ui-mobile:form",
+          "components": [],
+          "name": "homeViewModel",
+          "enableDataBinding": false,
+          "submitButton": "Confirm",
+          "cancelButton": "Cancel"
+        }
+      ],
+      "title": "Home",
       "addToNavigation": true,
       "icon": "home"
+    },
+    {
+      "type": "kendo-ui-mobile:view",
+      "name": "anliegenmeldenView",
+      "components": [
+        {
+          "type": "kendo-ui-mobile:form",
+          "components": [],
+          "name": "anliegenmeldenViewModel",
+          "enableDataBinding": false,
+          "submitButton": "Confirm",
+          "cancelButton": "Cancel"
+        }
+      ],
+      "title": "Anliegen melden",
+      "addToNavigation": true,
+      "icon": "mostviewed"
+    },
+    {
+      "type": "kendo-ui-mobile:view",
+      "name": "kontaktView1",
+      "components": [
+        {
+          "type": "kendo-ui-mobile:form",
+          "components": [],
+          "name": "kontaktView1Model",
+          "enableDataBinding": false,
+          "submitButton": "Confirm",
+          "cancelButton": "Cancel"
+        }
+      ],
+      "title": "Kontakt",
+      "addToNavigation": true,
+      "icon": "edit"
+    },
+    {
+      "type": "kendo-ui-mobile:view",
+      "name": "uberunsView1",
+      "components": [
+        {
+          "type": "kendo-ui-mobile:form",
+          "components": [],
+          "name": "uberunsView1Model",
+          "enableDataBinding": false,
+          "submitButton": "Confirm",
+          "cancelButton": "Cancel"
+        }
+      ],
+      "title": "Über uns",
+      "addToNavigation": true,
+      "icon": "contacts"
     }
   ],
   "dataProviders": [],

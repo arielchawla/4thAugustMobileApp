@@ -1,4 +1,4 @@
-<div data-role="view" data-title="View" data-layout="main" data-model="app.home" data-show="app.home.onShow" data-after-show="app.home.afterShow" id="homeScreen" class="screen">
+<div data-role="view" data-title="" data-layout="main-nonav" data-model="app.home" data-show="app.home.onShow" data-after-show="app.home.afterShow" id="homeScreen" class="screen">
     <header data-role="header">
         <div data-role="navbar" class="header-text">
 
@@ -7,9 +7,96 @@
         </div>
     </header>
 
+<img src="components/images/topBanner.png" alt="Smiley face" height="40" width="100%">
+		
+		<div class="serviceAppText">
+			<h3>Herzlich Willkommen in der Service-App
+				von die<b>mietwaesche</b>.de</h3>
+			<p>Vorab benötigen wir noch ein paar schnelle
+Informationen von Ihnen:</p>
+		</div>
+		
+        <form class="mobileAppForm">
+			<div class="appformField">
+				<input type="text" id="IhrVorname" placeholder="Ihr Vorname">
+				<input type="text" id="IhrNachname" placeholder="Ihr Nachname">
+				<input type="text" id="NameIhresUnternehmens" placeholder="Name Ihres Unternehmens">
+				<input type="text" id="PostalCode" placeholder="Postleitzahl Ihres Unternehmens" onblur="PostalCodeFunction()">       
+			</div>
+				
 
+			<div class="button-group confirmAppButton">
+				<button type="button"  onclick="Startapp()">Zur App <span><img src="components/images/right-arrow.png" alt="right arrow"></span></button>
+			</div>
+        </form>
     <!-- START_CUSTOM_CODE_home -->
     <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
 
     <!-- END_CUSTOM_CODE_home -->
 </div>
+<style>
+.appformField input {
+    width: 90%;
+    margin: 0 auto;
+    display: block;
+    height: 34px;
+    margin-bottom: 12px;
+    padding: 10px;
+	border: none;
+}
+.km-nova .km-content {
+    background-color: #CED3CF;
+}
+form.mobileAppForm {
+	margin-top: 50px;
+}
+.serviceAppText {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 25px;
+}
+.serviceAppText h3 {
+    color: #405457;
+}
+.serviceAppText p {
+    color: #405457;
+	margin-top: 20px;
+}
+.logoImg img {
+    height: 50px;
+}
+.button-group.confirmAppButton button {
+    width: 97%;
+    border: none;
+    border: none;
+    height: 34px;
+    background: #70B33C;
+    color: #fff;
+    text-align: left;
+    padding: 0px 15px;
+    margin: auto;
+    line-height: 34px;
+    display: block;
+}
+.button-group.confirmAppButton {
+    margin-top: 140px;
+}
+.confirmAppButton span img {
+    height: 30px;
+    float: right;
+    padding-top: 5px;
+}
+.appformField ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #70B33C;
+}
+.appformField ::-moz-placeholder { /* Firefox 19+ */
+  color: #70B33C;
+}
+.appformField :-ms-input-placeholder { /* IE 10+ */
+  color: #70B33C;
+}
+.appformField :-moz-placeholder { /* Firefox 18- */
+  color: #70B33C;
+}
+</style>

@@ -1,0 +1,185 @@
+
+<div  data-layout="main" data-model="app.AnliegenMelden" data-show="app.AnliegenMelden.onShow" data-after-show="app.AnliegenMelden.afterShow" id="AnliegenMeldenScreen" class="screen" data-before-show="gotoTop">     
+    <div id="AnliegenMeldenModel" class="form-view screen__content screen__content--form add-item-view">
+        <img src="components/images/topBanner.png" alt="Smiley face" height="40" width="100%">
+
+        <div class="optionalText">
+			<h3>Ihr Anliegen (optional)</h3>	
+		</div>
+        <!--<form>
+            <ul class="form-content" data-role="listview" data-style="inset">
+            </ul>
+        </form>-->
+        <!-- START_CUSTOM_CODE_requestViewModel -->
+        <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
+
+        <!-- END_CUSTOM_CODE_requestViewModel -->
+    </div>
+    
+    <!-- START_CUSTOM_CODE_requestView -->
+    <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
+   
+    <div class="bgimg">
+        
+		<div class="row"> 
+			<div class="uploadImageSec">
+				<div class="captureImg">
+					<img class="imgStyle uploadimage1" id="smallImage1" src="" onclick="capturePhoto1()">
+					<div class="uploadimgText1">
+						<h5>Falls vorhanden:</h5>
+						<p>1. Foto hochladen</p>
+					</div>
+				</div>
+				  
+				<div class="captureImg">
+					<img class="imgStyle uploadimage2" id="smallImage2" src="" onclick="capturePhoto2()">
+					<div class="uploadimgText2">
+						<h5>Falls nötig:</h5>
+						<p>2. Foto hochladen</p>
+					</div>
+				</div>
+				  <div class="clear"></div>
+			</div>
+		 
+		</div>
+		
+		<div class="row"> 
+			<div class="uploadImageSec" style="text-align:center;">
+				<div class="captureImg">
+					<img class="imgStyle uploadimage1" id="smallImage3" src="" onclick="capturePhoto3()">
+					<div class="uploadimgText1">
+						<h5>Falls nötig:</h5>
+						<p>3. Foto hochladen</p>
+					</div>
+				</div>
+				  
+				<div class="captureImg">
+					<img class="imgStyle uploadimage2" id="smallImage4" src="" onclick="capturePhoto4()">
+					<div class="uploadimgText2">
+						<h5>Falls nötig:</h5>
+						<p>4. Foto hochladen</p>
+					</div>
+				</div>
+				  <div class="clear"></div>
+			</div>
+		 
+		</div>
+        
+        <!--<div style="width:80%; margin-left:10%;">
+                    <label>
+                        <span class="field__label" style="color: white" >Zusätzliche Fehlerbeschreibung</span>
+
+                        <textarea rows="7" style="font-size: 20px; border: medium" id="damagedMessage"></textarea>
+                    </label>
+                
+        </div>-->
+		<div class="uploadFooterBtn">
+			<div class="button-group confirmAppButton weiterAppbutton ">
+				<button class="zuruckBtn" type="button" onclick="ZuruckClick()">zurück <span><img src="components/images/left-arrow.png" alt="right arrow"></span></button>
+				<button class="sendenBtn" type="button" onclick="mailImages()">Senden <span><img src="components/images/right-arrow.png" alt="right arrow"></span></button>
+			</div>
+			
+		</div>
+        
+    <!--<div class="button-group">      
+        <a class="primary" data-role="button" data-bind="events: { click: requestViewModel.submit }" onclick="mailImages()">Senden</a>
+    </div>-->
+  
+    </div>   
+    <!-- END_CUSTOM_CODE_requestView -->
+</div>
+<style type="text/css">
+<!-- .imgStyle{
+    display: block;
+    height: 150px;
+    width: 40%;
+    float: left;
+    margin: 5%;
+} -->
+.uploadimage1 {
+    display: block;
+    height: 150px;
+    width: 45%;
+    float: left;
+    background: #fff;
+    max-width: 100%;
+    margin-left: 10px !important;
+    margin: 0;
+}
+.uploadimage2 {
+	display: block;
+    height: 150px;
+    width: 45%;
+    float: right;
+    background: #fff;
+    max-width: 100%;
+    margin-right: 10px !important;
+    margin: 0;
+}
+.clear {
+    clear: both;
+}
+.uploadImageSec {
+    margin-top: 10px;
+}
+button.uploadBtn {
+    border: none;
+    background: none;
+    text-align: left;
+    padding: 0;
+    color: #70B33C;
+}
+
+.optionalText h3 {
+    text-align: center;
+    margin: 25px 0px;
+	color:#405457;
+}
+.weiterAppbutton button.zuruckBtn {
+    float: left;
+    width: 47%;
+    background: #275660;
+}
+.confirmAppButton button.sendenBtn {
+    float: right;
+    width: 47%;
+}
+
+.captureImg {
+    position: relative;
+}
+.uploadimgText1 p {
+    margin: 0;
+	color:#70B33C;
+}
+.uploadimgText2 p {
+    margin: 0;
+	color:#70B33C;
+}
+.uploadimgText1 h5 {
+    text-align:center;
+	color:#b1c3c8;
+}
+.uploadimgText2 h5 {
+    text-align:center;
+	color:#b1c3c8;
+}
+.uploadimgText1 {
+    position: absolute;
+    top: 50px;
+    left: 45px;
+}
+.uploadimgText2 {
+    position: absolute;
+    right: 45px;
+    top: 50px;
+}
+.km-scroll-container {
+    height: 100%;
+}
+.footerTabs {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+</style>
