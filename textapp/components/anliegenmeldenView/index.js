@@ -49,13 +49,13 @@ function Weiterclick(){
     debugger;   
     var FirstDd = document.getElementById("ddfirst").value;
    var SecondDd = document.getElementById("ddsecond").value;
-    var ThirdDd = document.getElementById("ddthird").value;
+    // var ThirdDd = document.getElementById("ddthird").value;
      var TextBarCode = document.getElementById("barcodewritten").value;
     var message = document.getElementById("txtBeschreibung").value;
     // var PostalCode = document.getElementById("PostalCode").value;
     localStorage.setItem("ddfirst", FirstDd);
     localStorage.setItem("ddsecond", SecondDd);
-    localStorage.setItem("ddthird", ThirdDd);
+    // localStorage.setItem("ddthird", ThirdDd);
          localStorage.setItem("txtBeschreibung", message);
          localStorage.setItem("barcodetext", TextBarCode);
         //   localStorage.setItem("PostalCode", PostalCode);
@@ -423,6 +423,7 @@ function mailImages(){
     var PostalCode = localStorage.getItem('PostalCode');
      var BarcodeResult = localStorage.getItem('BarcodeResult');
      var BarcodeWrittenOut = localStorage.getItem('barcodetext');//gets the barcode from the local storage
+     var txtBeschreibung=localStorage.getItem('txtBeschreibung');
     localStorage.removeItem('BarcodeResult'); //barcode scanned cleared
     // localStorage.removeItem('ReklamationMessage');
     localStorage.removeItem('IhrVorname');
@@ -448,11 +449,11 @@ function mailImages(){
     var emailBody =  'IhrVorname: '+ IhrVorname + '%0D%0A'+'%0D%0A'+ 'IhrNachname: '+ IhrNachname + '%0D%0A'+'%0D%0A' + 'Beschreibung Comment: ' +txtBeschreibung + '%0D%0A'+'%0D%0A'+  'Barcode Link: ' + barcodelink  +  '%0D%0A'+'%0D%0A'+ ' Image1 = '+ image1 + '%0D%0A'+'%0D%0A'+ ' Image2 = '+image2 + '%0D%0A'+'%0D%0A'+ ' image3 = '+ image3 + '%0D%0A'+'%0D%0A' + 'and image4 = ' + image4;
 if (window.navigator.simulator === true) {
                 alert('This plugin is not available in the simulator.');
-                app.mobileApp.navigate('components/home/view.html');// returns to homepage
+                app.mobileApp.navigate('components/homeView/view.html');// returns to homepage
                 return true;
             } else if (window.cordova === undefined || window.cordova.plugins === undefined) {
                 alert('Plugin not found. Maybe you are running in AppBuilder Companion app which currently does not support this plugin.');
-                app.mobileApp.navigate('components/home/view.html'); // returns to homepage
+                app.mobileApp.navigate('components/homeView/view.html'); // returns to homepage
                 return true;
             } else {
                 cordova.plugins.email.open({
@@ -466,7 +467,7 @@ if (window.navigator.simulator === true) {
                     isHtml:      true
                 })
             }
-            app.mobileApp.navigate('components/home/view.html'); // returns to homepage
+            app.mobileApp.navigate('components/homeView/view.html'); // returns to homepage
             
         image1 ="";
         image2 ="";
@@ -481,6 +482,11 @@ if (window.navigator.simulator === true) {
     //  $('#AnliegenMelden').show();
      app.mobileApp.navigate('components/anliegenmeldenView/view.html'); 
  }
+//  function AnliegenMeldon(){
+//     debugger;
+//     alert(11);   
+//     jQuery('.anliegen').addClass('Current');
+// }
 // START_CUSTOM_CODE_anliegenmeldenViewModel
 // Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes
 

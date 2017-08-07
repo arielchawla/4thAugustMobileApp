@@ -54,6 +54,17 @@ localStorage.removeItem('BarcodeResult');
          localStorage.setItem("PostalCode", PostalCode);        
          app.mobileApp.navigate('components/homeView/view.html');
 }
+ function AnliegenMeldon(){  
+    jQuery('.anliegen').addClass('Current');
+}
+ function kontakt(){
+    debugger;   
+    jQuery('.kontakt').addClass('Current');
+}
+ function uberUs(){
+    debugger;   
+    jQuery('.uberUs').addClass('Current');
+}
 // START_CUSTOM_CODE_homeViewModel
 // Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes
 

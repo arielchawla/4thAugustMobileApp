@@ -1,4 +1,3 @@
-
 <div  data-layout="main" data-model="app.AnliegenMelden" data-show="app.AnliegenMelden.onShow" data-after-show="app.AnliegenMelden.afterShow" id="AnliegenMeldenScreen" class="screen" data-before-show="gotoTop">     
     <div id="AnliegenMeldenModel" class="form-view screen__content screen__content--form add-item-view">
         <img src="components/images/topBanner.png" alt="Smiley face" height="40" width="100%">
@@ -25,7 +24,7 @@
 			<div class="uploadImageSec">
 				<div class="captureImg">
 					<img class="imgStyle uploadimage1" id="smallImage1" src="" onclick="capturePhoto1()">
-					<div class="uploadimgText1">
+					<div class="uploadimgText1" onclick="capturePhoto1()">
 						<h5>Falls vorhanden:</h5>
 						<p>1. Foto hochladen</p>
 					</div>
@@ -33,7 +32,7 @@
 				  
 				<div class="captureImg">
 					<img class="imgStyle uploadimage2" id="smallImage2" src="" onclick="capturePhoto2()">
-					<div class="uploadimgText2">
+					<div class="uploadimgText2" onclick="capturePhoto2()">
 						<h5>Falls nötig:</h5>
 						<p>2. Foto hochladen</p>
 					</div>
@@ -47,7 +46,7 @@
 			<div class="uploadImageSec" style="text-align:center;">
 				<div class="captureImg">
 					<img class="imgStyle uploadimage1" id="smallImage3" src="" onclick="capturePhoto3()">
-					<div class="uploadimgText1">
+					<div class="uploadimgText1" onclick="capturePhoto3()">
 						<h5>Falls nötig:</h5>
 						<p>3. Foto hochladen</p>
 					</div>
@@ -55,7 +54,7 @@
 				  
 				<div class="captureImg">
 					<img class="imgStyle uploadimage2" id="smallImage4" src="" onclick="capturePhoto4()">
-					<div class="uploadimgText2">
+					<div class="uploadimgText2" onclick="capturePhoto4()">
 						<h5>Falls nötig:</h5>
 						<p>4. Foto hochladen</p>
 					</div>
@@ -77,25 +76,28 @@
 			<div class="button-group confirmAppButton weiterAppbutton ">
 				<button class="zuruckBtn" type="button" onclick="ZuruckClick()">zurück <span><img src="components/images/left-arrow.png" alt="right arrow"></span></button>
 				<button class="sendenBtn" type="button" onclick="mailImages()">Senden <span><img src="components/images/right-arrow.png" alt="right arrow"></span></button>
-			</div>
-			
+			</div>			
 		</div>
         
     <!--<div class="button-group">      
         <a class="primary" data-role="button" data-bind="events: { click: requestViewModel.submit }" onclick="mailImages()">Senden</a>
     </div>-->
   
-    </div>   
+    </div>  
+    <!--<footer data-role="footer">
+            <div data-role="tabstrip" id="navigation-container">
+                
+                <a href="components/anliegenmeldenView/view.html" data-icon=""><img src="components/images/icon1.png"><span class="navigation-link-text" data-bind="text: strings.anliegenmeldenView.title">Anliegen melden</span></a>
+                <a href="components/kontaktView1/view.html" data-icon=""><img src="components/images/icon2.png" ><span class="navigation-link-text" data-bind="text: strings.kontaktView1.title">Kontakt</span></a>
+                <a href="components/uberunsView1/view.html" data-icon=""><img src="components/images/icon3.png"><span class="navigation-link-text" data-bind="text: strings.uberunsView1.title">Über uns</span></a>
+            </div>
+            <div id="navigation-container-more" style="display: none">
+            </div>
+        </footer>  -->
     <!-- END_CUSTOM_CODE_requestView -->
 </div>
 <style type="text/css">
-<!-- .imgStyle{
-    display: block;
-    height: 150px;
-    width: 40%;
-    float: left;
-    margin: 5%;
-} -->
+
 .uploadimage1 {
     display: block;
     height: 150px;
@@ -177,9 +179,9 @@ button.uploadBtn {
 .km-scroll-container {
     height: 100%;
 }
-.footerTabs {
+
+div#navigation-container {
     position: fixed;
-    width: 100%;
     bottom: 0;
 }
 </style>

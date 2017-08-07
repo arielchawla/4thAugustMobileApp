@@ -1,5 +1,6 @@
 {
   "CorePlugins": [
+    "com.phonegap.plugins.barcodescanner@6.0.5",
     "cordova-plugin-battery-status",
     "cordova-plugin-camera",
     "cordova-plugin-contacts",
@@ -18,6 +19,7 @@
     "cordova-plugin-splashscreen",
     "cordova-plugin-statusbar",
     "cordova-plugin-vibration",
-    "cordova-plugin-whitelist"
+    "cordova-plugin-whitelist",
+    "de.appplant.cordova.plugin.email-composer@0.8.2.2"
   ]
 }

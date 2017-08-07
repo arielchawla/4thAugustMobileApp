@@ -30,9 +30,11 @@
         <footer data-role="footer">
             <div data-role="tabstrip" id="navigation-container">
                 <!--<a href="components/homeView/view.html" data-icon="home"><span class="navigation-link-text" data-bind="text: strings.homeView.title"></span></a>-->
-                <a href="components/anliegenmeldenView/view.html" data-icon=""><img src="components/images/icon1.png" onclick="AnliegenMelden()"> <span class="navigation-link-text" data-bind="text: strings.anliegenmeldenView.title"></span></a>
-                <a href="components/kontaktView1/view.html" data-icon=""><img src="components/images/icon2.png" onclick="AnliegenMelden()"> <span class="navigation-link-text" data-bind="text: strings.kontaktView1.title"></span></a>
-                <a href="components/uberunsView1/view.html" data-icon=""><img src="components/images/icon3.png" onclick="AnliegenMelden()"> <span class="navigation-link-text" data-bind="text: strings.uberunsView1.title"></span></a>
+                <a href="components/anliegenmeldenView/view.html" data-icon="" class="anliegen" onclick="AnliegenMeldon()"><img id="icon1" src="components/images/icon1.png">
+                <img id="imgGreen1" src="components/images/icon4.png" style="display:none"><span class="navigation-link-text" data-bind="text: strings.anliegenmeldenView.title"></span>
+                </a>
+                <a href="components/kontaktView1/view.html" data-icon="" class="kontakt" onclick="kontakt()"><img id="icon2" src="components/images/icon2.png" ><img id="imgGreen2" src="components/images/icon5.png" style="display:none"><span class="navigation-link-text" data-bind="text: strings.kontaktView1.title"></span></a>
+                <a href="components/uberunsView1/view.html" data-icon="" class="uberUs" onclick="uberUs()"><img  id="icon3" src="components/images/icon3.png"><img id="imgGreen3" src="components/images/icon6.png" style="display:none"><span class="navigation-link-text" data-bind="text: strings.uberunsView1.title"></span></a>
             </div>
             <div id="navigation-container-more" style="display: none">
             </div>
@@ -97,9 +99,43 @@ div#navigation-container {
 div#navigation-container {
     height: 80px;
 }
+.km-state-active.Current img#imgGreen1 {
+    display: block !important;
+}
+.km-state-active.Current img#icon1 {
+    display: none !important;
+}
+.km-state-active.Current img#imgGreen2 {
+    display: block !important;
+}
+.km-state-active.Current img#icon2 {
+    display: none !important;
+}
+.km-state-active.Current img#imgGreen3 {
+    display: block !important;
+}
+.km-state-active.Current img#icon3 {
+    display: none !important;
+}
+.km-state-active.Current span.navigation-link-text {
+    color: #70b33c !important;
+}
 </style>
 
 
 </body>
-
 </html>
+<script>
+
+//  function AnliegenMeldon(){  
+//     jQuery('.anliegen').addClass('Current');
+// }
+//  function kontakt(){
+//     debugger;   
+//     jQuery('.kontakt').addClass('Current');
+// }
+//  function uberUs(){
+//     debugger;   
+//     jQuery('.uberUs').addClass('Current');
+// }
+    </script>

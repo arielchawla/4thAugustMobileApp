@@ -20,10 +20,10 @@
 				  <option selected value="Betroffenes Kleidungsstück">Betroffenes Kleidungsstück</option>
 				  <option value="Betroffenes Kleidungsstück">Betroffenes Kleidungsstück</option>
 				</select>
-				<select class="selectService" id="ddthird">
+				<!--<select class="selectService" id="ddthird">
 				  <option selected value="Betroffenes">Betroffenes</option>
 				  <option value="Betroffenes">Betroffenes</option>
-				</select>
+				</select>-->
 				
 				<button class="klickenBtn" type="button" onclick="barcodeScan()">Hier klicken und Barcode scannen</button>
 				<input type="text" id="barcodewritten" placeholder="Oder Barcodenummer hier eintragen">
@@ -367,4 +367,14 @@ button.uploadBtn {
     width: 100%;
     bottom: 0;
 }
+.Current{
+color:#b1c3c8;
+}
 </style>
+<script>
+$('document').ready(function()
+{
+    jQuery('.anliegen').addClass('Current');
+})
+
+</script>

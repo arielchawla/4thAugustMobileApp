@@ -1,3 +1,5 @@
+
+
 'use strict';
 
 app.kontaktView1 = kendo.observable({
@@ -46,6 +48,10 @@ function Anmeldedaten()
     localStorage.removeItem('LastName');
     localStorage.removeItem('barcodetext'); // text barcode cleared
     app.mobileApp.navigate('components/home/view.html'); 
+}
+ function kontakt(){
+    debugger;   
+    jQuery('.kontakt').addClass('Current');
 }
 // START_CUSTOM_CODE_kontaktView1Model
 // Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes
