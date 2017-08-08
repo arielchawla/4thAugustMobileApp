@@ -19,8 +19,8 @@
 
 #kendoUiMobileApp .button-group .km-button {
     display: table-cell;
-    padding: .6em .8em;
-    margin: 1em 0;
+    /*padding: .6em .8em;*/
+    /*margin: 1em 0;*/
 }
 
 #kendoUiMobileApp .button-group.button-group-vertical .km-button {

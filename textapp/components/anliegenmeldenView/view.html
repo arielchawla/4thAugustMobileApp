@@ -14,11 +14,13 @@
 				<input type="text" id="NameIhresUnternehmens" placeholder="Name Ihres Unternehmens"> -->
 				<select class="selectService" id="ddfirst">
 				  <option selected value="Grund Ihres Anliegens">Grund Ihres Anliegens</option>
-				  <option value="Grund Ihres Anliegens">Grund Ihres Anliegens</option>
+				  <option value="2">Option 1</option>
+                  <option value="3">Option 2</option>
 				</select>
 				<select class="selectService" id="ddsecond">
 				  <option selected value="Betroffenes Kleidungsstück">Betroffenes Kleidungsstück</option>
-				  <option value="Betroffenes Kleidungsstück">Betroffenes Kleidungsstück</option>
+				  <option value="2">Option 1</option>
+                   <option value="3">Option 2</option>
 				</select>
 				<!--<select class="selectService" id="ddthird">
 				  <option selected value="Betroffenes">Betroffenes</option>
@@ -126,7 +128,7 @@
 	-webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    background: url(./components/Images/down-arrow.png) 96% / 15% no-repeat #fff;
+    background: url(./components/images/down-arrow.png) 96% / 15% no-repeat #fff;
     background-size: 5%;
 }
 .km-nova .km-content {
@@ -273,108 +275,9 @@ textarea#txtBeschreibung {
     bottom: 0;
 }
 </style>
-<style type="text/css">
-<!-- .imgStyle{
-    display: block;
-    height: 150px;
-    width: 40%;
-    float: left;
-    margin: 5%;
-} -->
-.uploadimage1 {
-    display: block;
-    height: 150px;
-    width: 45%;
-    float: left;
-    background: #fff;
-    max-width: 100%;
-    margin-left: 10px !important;
-    margin: 0;
-}
-.uploadimage2 {
-	display: block;
-    height: 150px;
-    width: 45%;
-    float: right;
-    background: #fff;
-    max-width: 100%;
-    margin-right: 10px !important;
-    margin: 0;
-}
-.clear {
-    clear: both;
-}
-.uploadImageSec {
-    margin-top: 10px;
-}
-button.uploadBtn {
-    border: none;
-    background: none;
-    text-align: left;
-    padding: 0;
-    color: #70B33C;
-}
-
-.optionalText h3 {
-    text-align: center;
-    margin: 25px 0px;
-	color:#405457;
-}
-.weiterAppbutton button.zuruckBtn {
-    float: left;
-    width: 47%;
-    background: #275660;
-}
-.confirmAppButton button.sendenBtn {
-    float: right;
-    width: 47%;
-}
-
-.captureImg {
-    position: relative;
-}
-.uploadimgText1 p {
-    margin: 0;
-	color:#70B33C;
-}
-.uploadimgText2 p {
-    margin: 0;
-	color:#70B33C;
-}
-.uploadimgText1 h5 {
-    text-align:center;
-	color:#b1c3c8;
-}
-.uploadimgText2 h5 {
-    text-align:center;
-	color:#b1c3c8;
-}
-.uploadimgText1 {
-    position: absolute;
-    top: 50px;
-    left: 35px;
-}
-.uploadimgText2 {
-    position: absolute;
-    right: 35px;
-    top: 50px;
-}
-.km-scroll-container {
-    height: 100%;
-}
-.footerTabs {
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
-.Current{
-color:#b1c3c8;
-}
-</style>
 <script>
 $('document').ready(function()
 {
     jQuery('.anliegen').addClass('Current');
 })
-
 </script>

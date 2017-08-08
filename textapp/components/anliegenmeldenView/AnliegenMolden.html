@@ -73,8 +73,9 @@
                 
         </div>-->
 		<div class="uploadFooterBtn">
-			<div class="button-group confirmAppButton weiterAppbutton ">
-				<button class="zuruckBtn" type="button" onclick="ZuruckClick()">zurück <span><img src="components/images/left-arrow.png" alt="right arrow"></span></button>
+			<div class="button-group confirmAppButton weiterAppbutton">
+                <!--data-role="button" href="#:back"-->
+				<button class="zuruckBtn" type="button" data-role="button" href="#:back">Zurück <span><img src="components/images/left-arrow.png" alt="right arrow"></span></button>
 				<button class="sendenBtn" type="button" onclick="mailImages()">Senden <span><img src="components/images/right-arrow.png" alt="right arrow"></span></button>
 			</div>			
 		</div>
@@ -184,4 +185,5 @@ div#navigation-container {
     position: fixed;
     bottom: 0;
 }
+
 </style>
