@@ -57,8 +57,7 @@ function Weiterclick(){
     // localStorage.setItem("ddthird", ThirdDd);
          localStorage.setItem("txtBeschreibung", message);
          localStorage.setItem("barcodetext", TextBarCode);
-        //   localStorage.setItem("PostalCode", PostalCode);
-        // app.view().div.find("#AnligenMolden").hide();
+        //   localStorage.setItem("PostalCode", PostalCode);      
      app.mobileApp.navigate('components/anliegenmeldenView/AnliegenMolden.html');
     // $('#AnligenMelden').hide();
     // $('#anliegenMeldenOptional').show();
@@ -442,6 +441,8 @@ function mailImages(){
             $("#PostalCode").val("");
             $("#barcodewritten").val("");
             $("#txtBeschreibung").val("");
+            $("#ddfirst").val("");
+            $("#ddsecond").val("");
             $("#txtReklamationMessage").val("");
             $("#smallImage").attr('src','');
             $("#largeImage").attr('src','');
@@ -450,7 +451,7 @@ function mailImages(){
             $("#smallImage3").attr('src','');
             $("#smallImage4").attr('src','');
             // $("#damagedMessage").val("");
-    var emailBody =  'IhrVorname: '+ IhrVorname + '%0D%0A'+'%0D%0A'+ 'IhrNachname: '+ IhrNachname + '%0D%0A'+'%0D%0A'+ 'FirstDropdown:'+ ddfirst + '%0D%0A'+'%0D%0A'+ 'SecondDropdown:'+ ddsecond + '%0D%0A'+'%0D%0A'+'Beschreibung Comment: ' + txtBeschreibung + '%0D%0A'+'%0D%0A'+  'Barcode Link: ' + barcodelink  +  '%0D%0A'+'%0D%0A'+ ' Image1 = '+ image1 + '%0D%0A'+'%0D%0A'+ ' Image2 = '+image2 + '%0D%0A'+'%0D%0A'+ ' image3 = '+ image3 + '%0D%0A'+'%0D%0A' + 'and image4 = ' + image4;
+    var emailBody =  'IhrVorname: '+ IhrVorname + '%0D%0A'+'%0D%0A'+ 'IhrNachname: '+ IhrNachname + '%0D%0A'+'%0D%0A'+ 'CompanyName: '+ companyName + '%0D%0A'+'%0D%0A'+ 'FirstDropdown:'+ ddfirst + '%0D%0A'+'%0D%0A'+ 'SecondDropdown:'+ ddsecond + '%0D%0A'+'%0D%0A'+'Beschreibung Comment: ' + txtBeschreibung + '%0D%0A'+'%0D%0A'+  'Barcode Link: ' + barcodelink  +  '%0D%0A'+'%0D%0A'+ ' Image1 = '+ image1 + '%0D%0A'+'%0D%0A'+ ' Image2 = '+image2 + '%0D%0A'+'%0D%0A'+ ' image3 = '+ image3 + '%0D%0A'+'%0D%0A' + 'and image4 = ' + image4;
 if (window.navigator.simulator === true) {
                 alert('This plugin is not available in the simulator.');
                 app.mobileApp.navigate('components/homeView/view.html');// returns to homepage
@@ -467,7 +468,7 @@ if (window.navigator.simulator === true) {
                     // bcc:         ['person3@domain.com', 'person4@domain.com'],
                     attachments: ['base64:image1.jpg//'+image1, 'base64:image2.jpg//'+image2,'base64:image3.jpg//'+image3,'base64:image4.jpg//'+image4],
                     subject:     'Kunde Reklamation',
-                    body:        "<h2>Hallo !</h2><div><span>Vorname: "+IhrVorname +"</span><br><br><span>Nachname: "+ IhrNachname +"</span><br><br><span>Grund Ihres Anliegens: "+ ddfirst +"</span><br><br><span>Betroffenes Kleidungsstück: "+ ddsecond +"</span><br><br><span>Barcode: "+ BarcodeResult +"</span><br><br><span>Manuelle Barcodeerfassung: "+ BarcodeWrittenOut +"</span><br><br></span><br><br><span>Beschreibung: "+txtBeschreibung +"</span><br><br>",
+                    body:        "<h2>Hallo !</h2><div><span>Vorname: "+IhrVorname +"</span><br><br><span>Nachname: "+ IhrNachname +"</span><br><br><span>CompanyName: "+ companyName +"</span><br><br><span>Grund Ihres Anliegens: "+ ddfirst +"</span><br><br><span>Betroffenes Kleidungsstück: "+ ddsecond +"</span><br><br><span>Barcode: "+ BarcodeResult +"</span><br><br><span>Manuelle Barcodeerfassung: "+ BarcodeWrittenOut +"</span><br><br></span><br><br><span>Beschreibung: "+txtBeschreibung +"</span><br><br>",
                     isHtml:      true
                 })
             }
@@ -480,13 +481,6 @@ if (window.navigator.simulator === true) {
        
  }
 
-//  function ZuruckClick()
-//  {
-//      debugger;   
-//      app.mobileApp.navigate('components/anliegenmeldenView/view.html'); 
-//      app.mobileApp.body.find('#AnliegenMeldenOptional').hide()
-//      app.mobileApp.body.find('#AnliegenMelden').Show()
-//  }
 
 // START_CUSTOM_CODE_anliegenmeldenViewModel
 // Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes
