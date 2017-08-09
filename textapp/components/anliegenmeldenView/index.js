@@ -450,6 +450,7 @@ function mailImages(){
             $("#smallImage2").attr('src','');
             $("#smallImage3").attr('src','');
             $("#smallImage4").attr('src','');
+             jQuery('.anliegen').removeClass('Current');
             // $("#damagedMessage").val("");
     var emailBody =  'IhrVorname: '+ IhrVorname + '%0D%0A'+'%0D%0A'+ 'IhrNachname: '+ IhrNachname + '%0D%0A'+'%0D%0A'+ 'CompanyName: '+ companyName + '%0D%0A'+'%0D%0A'+ 'FirstDropdown:'+ ddfirst + '%0D%0A'+'%0D%0A'+ 'SecondDropdown:'+ ddsecond + '%0D%0A'+'%0D%0A'+'Beschreibung Comment: ' + txtBeschreibung + '%0D%0A'+'%0D%0A'+  'Barcode Link: ' + barcodelink  +  '%0D%0A'+'%0D%0A'+ ' Image1 = '+ image1 + '%0D%0A'+'%0D%0A'+ ' Image2 = '+image2 + '%0D%0A'+'%0D%0A'+ ' image3 = '+ image3 + '%0D%0A'+'%0D%0A' + 'and image4 = ' + image4;
 if (window.navigator.simulator === true) {
@@ -480,7 +481,9 @@ if (window.navigator.simulator === true) {
         image4 ="";
        
  }
-
+ function AnliegenMeldon(){  
+    jQuery('.anliegen').addClass('Current');
+}
 
 // START_CUSTOM_CODE_anliegenmeldenViewModel
 // Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes

@@ -1,5 +1,4 @@
 'use strict';
-
 (function() {
     var app = {
         data: {},
@@ -31,6 +30,7 @@
     };
 
     $(document).ready(function() {
+    jQuery('.kontakt').addClass('Current');
 
         var navigationShowMoreView = $('#navigation-show-more-view').find('ul'),
             allItems = $('#navigation-container-more').find('a'),
@@ -48,7 +48,7 @@
     });
 
     app.listViewClick = function _listViewClick(item) {
-        var tabstrip = app.mobileApp.view().footer.find('.km-tabstrip').data('kendoMobileTabStrip');
+        var tabstrip = app.mobileApp.view().footer.find('.km-tabstrip').data('kendoMobileTabStrip');       
         tabstrip.clear();
     };
 
@@ -142,7 +142,7 @@
 }());
 
 /// start app modules
-(function localization(app) {
+(function localization(app) {   
     var localization = app.localization = kendo.observable({
             cultures: app.localization.cultures,
             defaultCulture: app.localization.defaultCulture,

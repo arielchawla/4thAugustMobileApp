@@ -1,5 +1,3 @@
-
-
 'use strict';
 
 app.kontaktView1 = kendo.observable({
@@ -47,6 +45,7 @@ function Anmeldedaten()
     localStorage.removeItem('FirstName');
     localStorage.removeItem('LastName');
     localStorage.removeItem('barcodetext'); // text barcode cleared
+     jQuery('.kontakt').removeClass('Current');
     app.mobileApp.navigate('components/home/view.html'); 
 }
  function kontakt(){
