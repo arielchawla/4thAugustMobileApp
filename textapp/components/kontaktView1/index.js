@@ -40,18 +40,27 @@ app.localization.registerView('kontaktView1');
 
 function Anmeldedaten()
 {
+    debugger;
     localStorage.removeItem('BarcodeResult'); //barcode scanned cleared
     localStorage.removeItem('ReklamationMessage');
     localStorage.removeItem('FirstName');
     localStorage.removeItem('LastName');
     localStorage.removeItem('barcodetext'); // text barcode cleared
-     jQuery('.kontakt').removeClass('Current');
+    jQuery('.kontakt').removeAttr('href');
+    jQuery('.kontakt').removeClass('Current');
+    //jQuery('km-widget km-tabstrip li.active').removeClass('active');
     app.mobileApp.navigate('components/home/view.html'); 
 }
- function kontakt(){
-    debugger;   
+ function kontakt(){ 
     jQuery('.kontakt').addClass('Current');
 }
+
+$(document).on("click",".kontakt",function(){
+kontakt();
+$(this).attr("href","components/kontaktView1/view.html")
+app.mobileApp.navigate($(this).attr("href"));
+
+});
 // START_CUSTOM_CODE_kontaktView1Model
 // Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes
 

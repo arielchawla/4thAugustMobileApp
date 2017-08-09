@@ -30,10 +30,10 @@
         <footer data-role="footer">
             <div data-role="tabstrip" id="navigation-container">
                 <!--<a href="components/homeView/view.html" data-icon="home"><span class="navigation-link-text" data-bind="text: strings.homeView.title"></span></a>-->
-                <a href="components/anliegenmeldenView/view.html" data-icon="" class="anliegen" onclick="AnliegenMeldon()"><img id="icon1" src="components/images/icon1.png">
+                <a  data-icon="" class="anliegen"><img id="icon1" src="components/images/icon1.png">
                 <img id="imgGreen1" src="components/images/icon4.png" style="display:none"><span class="navigation-link-text" data-bind="text: strings.anliegenmeldenView.title"></span>
                 </a>
-                <a href="components/kontaktView1/view.html" data-icon="" class="kontakt" onclick="kontakt()"><img id="icon2" src="components/images/icon2.png" ><img id="imgGreen2" src="components/images/icon5.png" style="display:none"><span class="navigation-link-text" data-bind="text: strings.kontaktView1.title"></span></a>
+                <a data-icon="" class="kontakt"><img id="icon2" src="components/images/icon2.png" ><img id="imgGreen2" src="components/images/icon5.png" style="display:none"><span class="navigation-link-text" data-bind="text: strings.kontaktView1.title"></span></a>
                 <a href="components/uberunsView1/view.html" data-icon="" class="uberUs" onclick="uberUs()"><img  id="icon3" src="components/images/icon3.png"><img id="imgGreen3" src="components/images/icon6.png" style="display:none"><span class="navigation-link-text" data-bind="text: strings.uberunsView1.title"></span></a>
             </div>
             <div id="navigation-container-more" style="display: none">
@@ -120,20 +120,33 @@ div#navigation-container {
 .km-state-active.Current span.navigation-link-text {
     color: #70b33c !important;
 }
-</style>
 
+
+/*a.kontakt.km-button.km-state-active span.km-text span.navigation-link-text {
+    color: #ff0000 !important;
+}
+a.kontakt.km-button.km-state-active img#icon2 {
+    display: none;
+}
+a.kontakt.km-button.km-state-active img#imgGreen2 {
+    display: inline-block !important;
+}*/
+</style>
 </body>
 </html>
 <script>
-     $('document').ready(function()
-{
-    //  jQuery('.anliegen').addClass('Current');
-    //  jQuery('.kontakt').addClass('Current');
-    //  jQuery('.uberUs').addClass('Current');
-
-//      function kontakt(){
-//     alert('this is first'); 
+//          function kontakt(){
 //     jQuery('.kontakt').addClass('Current');
 // }
-})
+//      $('document').ready(function()
+// { 
+//      jQuery('.anliegen').addClass('Current');
+//      jQuery('.kontakt').addClass('Current');
+//      jQuery('.uberUs').addClass('Current');
+
+// //      function kontakt(){
+// //     alert('this is first'); 
+// //     jQuery('.kontakt').addClass('Current');
+// // }
+// })
    </script>

@@ -29,9 +29,7 @@
         });
     };
 
-    $(document).ready(function() {
-    jQuery('.kontakt').addClass('Current');
-
+    $(document).ready(function() {  
         var navigationShowMoreView = $('#navigation-show-more-view').find('ul'),
             allItems = $('#navigation-container-more').find('a'),
             navigationShowMoreContent = '';
@@ -70,9 +68,13 @@
     }
 
     app.keepActiveState = function _keepActiveState(item) {
+        debugger;
         var currentItem = item;
         $('#navigation-container li.active').removeClass('active');
         currentItem.addClass('active');
+        // $('#navigation-container li.active').addClass('Current');
+        // currentItem.addClass('Current');
+
     };
 
     window.app = app;

@@ -54,15 +54,23 @@ localStorage.removeItem('BarcodeResult');
          localStorage.setItem("PostalCode", PostalCode);        
          app.mobileApp.navigate('components/homeView/view.html');
 }
- function AnliegenMeldon(){  
-    jQuery('.anliegen').addClass('Current');
+ function AnliegenMeldon(){ 
+     debugger; 
+    jQuery('.anliegen').addClass('Current');    
 }
+$(document).on("click",".anliegen",function(){
+    debugger;
+  AnliegenMeldon();  
+$(this).attr("href","components/anliegenmeldenView/view.html")
+app.mobileApp.navigate($(this).attr("href"));
+
+});
  function kontakt(){
     debugger;   
     jQuery('.kontakt').addClass('Current');
 }
  function uberUs(){
-    debugger;   
+    debugger; 
     jQuery('.uberUs').addClass('Current');
 }
 // START_CUSTOM_CODE_homeViewModel
